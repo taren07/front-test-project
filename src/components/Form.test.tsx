@@ -17,5 +17,8 @@ describe("Form", () => {
 		const input = screen.getByPlaceholderText("Enter text");
 		await user.type(input, "Test Text");
 		expect(screen.getByDisplayValue("Test Text")).toBeInTheDocument();
+
+		const button = screen.getByRole("button");
+		await user.click(button);
 	});
 });
